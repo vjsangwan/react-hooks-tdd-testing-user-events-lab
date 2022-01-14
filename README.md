@@ -2,29 +2,58 @@
 
 ## Learning Goals
 
-- Use test-driven development to create and test user events in React
+- Use test-driven development to create a form and test user events
 
 ## Introduction
 
-A 1-2 sentence summary of what will be covered.
+In this lab, you will build on the portfolio site you created earlier in this
+section to get some practice at testing user events in React. You can use the
+code from the earlier lab as your starting point. Since you will be responsible
+for writing the tests, there are no tests provided for this lab. You can check
+your work against the solution branch once you're finished.
 
 ## Instructions
 
-Walk the student through any setup required to run the lesson (i.e.
-`npm install` and `npm start`).
+The requirement for this lab is to add a newsletter signup form to your
+portfolio page. The form should include:
 
-## Deliverables
+- a text input for the user's name
+- a text input for the user's email address
+- a set of checkboxes allowing the user to select their interests
+- a button to submit the form
 
-List each of the deliverables the student must complete in order to finish the
-lab. Provide as much context as possible, including instructions on how to run
-the tests and other means of validating successful completion of deliverables.
+When the form is submitted, use the form data display a personalized message
+indicating that the form was submitted successfully.
 
-## Conclusion
+**Bonus:** Include a list of the interests the user selected in the message as
+well.
 
-A short one or two paragraph summary of the contents of the lessons, recapping
-the learning goals.
+## The Process
+
+Recall that, when testing user events, your tests should:
+
+- verify that the initial state of the page is what you want
+- simulate a user event (e.g., typing in a text box)
+- verify that the state of the page updates as expected
+
+Be sure to follow the test-driven development process in creating your tests and
+code. Specifically, for each feature of your app, you should:
+
+- identify the desired element or behavior
+- write the tests to check for that element or behavior
+- write the code to make the tests pass
+
+Remember also to use accessible queries as much as possible.
 
 ## Resources
 
-- [Resource Link 1](example.com)
-- [Resource Link 2](example.com)
+- [Testing Library: Queries][queries]
+- [Jest DOM - Custom Matchers][jest-dom]
+- [Testing Library: user-event][user-event]
+- [MDN: ARIA Role Reference][mdn-aria-roles]
+
+[queries]: https://testing-library.com/docs/queries/about
+[jest-dom]: https://github.com/testing-library/jest-dom
+[user-event]: https://testing-library.com/docs/ecosystem-user-event/
+[mdn-aria-roles]:
+  https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques
