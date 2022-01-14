@@ -2,8 +2,6 @@ import { useState } from 'react';
 
 function App() {
 
-  const [mode, setMode] = useState('light');
-  const [toggleButtonText, setToggleButtonText] = useState('Switch to dark mode');
   const [showMessage, setShowMessage] = useState(false);
   const [fullName, setFullName] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
@@ -12,12 +10,6 @@ function App() {
     interest2: false,
     interest3: false
   })
-
-  const toggleButton = () => {
-    const newMode = mode === 'light' ? 'dark' : 'light';
-    setToggleButtonText(`Switch to ${mode} mode`);
-    setMode(newMode);
-  }
 
   const updateName = (e) => setFullName(e.target.value);
   const updateEmailAddress = (e) => setEmailAddress(e.target.value);
@@ -95,8 +87,7 @@ function App() {
   )
 
   return (
-    <main className={mode}>
-      <button onClick={toggleButton}>{toggleButtonText}</button>
+    <main>
       <h1>Hi, I'm (your name)</h1>
       <img alt="My profile pic" src="https://via.placeholder.com/350" />
       <h2>About Me</h2>
