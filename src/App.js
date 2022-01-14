@@ -4,7 +4,7 @@ function App() {
 
   const [mode, setMode] = useState('light');
   const [toggleButtonText, setToggleButtonText] = useState('Switch to dark mode');
-  const [status, setStatus] = useState({ showButton: true, showForm: false, showMessage: false});
+  const [showMessage, setShowMessage] = useState(false);
   const [fullName, setFullName] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
   const [interests, setInterests] = useState({ 
@@ -19,18 +19,14 @@ function App() {
     setMode(newMode);
   }
 
-  const toggleForm = () => setStatus({ showButton: false, showForm: true, showMessage: false });
-
   const updateName = (e) => setFullName(e.target.value);
   const updateEmailAddress = (e) => setEmailAddress(e.target.value);
   const updateInterests = (e) => setInterests({ ...interests, [e.target.id]: e.target.checked });
 
   const submitForm = (e) => {
     e.preventDefault();
-    setStatus({ showButton: false, showForm: false, showMessage: true });
+    setShowMessage(true);
   }
-
-  const displayButton = <button onClick={toggleForm}>Sign Up for my Newsletter!</button>
 
   const displayForm = (
     <form title='signup' onSubmit={submitForm}>
@@ -98,12 +94,6 @@ function App() {
     </div>
   )
 
-  const renderNewsletterSection = () => {
-    if (status.showButton) { return displayButton }
-    else if (status.showForm) { return displayForm }
-    else if (status.showMessage) {return displayMessage}
-  }
-
   return (
     <main className={mode}>
       <button onClick={toggleButton}>{toggleButtonText}</button>
@@ -119,7 +109,7 @@ function App() {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-      { renderNewsletterSection() }
+      { showMessage ? displayMessage : displayForm }
 
       <div>
         <a href="https://github.com">GitHub</a>
