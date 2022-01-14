@@ -2,15 +2,16 @@
 
 ## Learning Goals
 
-- Use test-driven development to create a form and test user events
+- Use test-driven development to create a form and test form events
 
 ## Introduction
 
 In this lab, you will build on the portfolio site you created earlier in this
-section to get some practice at testing user events in React. You can use the
-code from the earlier lab as your starting point. Since you will be responsible
-for writing the tests, there are no tests provided for this lab. You can check
-your work against the solution branch once you're finished.
+section to get some practice at testing user events in React. You can either use
+your code from the earlier lab as your starting point, or use the starter code
+provided here. Since you will be responsible for writing the tests, there are no
+tests included for this lab's requirements. You can check your work against the
+solution branch once you're finished.
 
 ## Instructions
 
@@ -22,11 +23,15 @@ portfolio page. The form should include:
 - a set of checkboxes allowing the user to select their interests
 - a button to submit the form
 
-When the form is submitted, use the form data display a personalized message
+When the form is submitted, use the form data to display a personalized message
 indicating that the form was submitted successfully.
 
-**Bonus:** Include a list of the interests the user selected in the message as
-well.
+**Bonus:** Include a list of the user's interests in the message as well.
+
+You will be doing your coding in `src/App.js` and `src/__tests__/App.test.js`.
+If you use the starter code, note that the `App.test.js` file includes the tests
+for the existing code for your reference. You will be responsible for creating
+the additional tests for the form and its behavior.
 
 ## The Process
 
