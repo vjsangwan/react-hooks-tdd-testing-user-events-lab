@@ -7,11 +7,10 @@
 ## Introduction
 
 In this lab, you will build on the portfolio site you created earlier in this
-section to get some practice at testing user events in React. You can either use
-your code from the earlier lab as your starting point, or use the starter code
-provided here. Since you will be responsible for writing the tests, there are no
-tests included for this lab's requirements. You can check your work against the
-solution branch once you're finished.
+section to get some practice at testing user events in React. You'll be
+responsible for writing tests as well as implementing the described
+functionality. You can check your work against the solution branch once you're
+finished.
 
 ## Instructions
 
@@ -29,9 +28,10 @@ indicating that the form was submitted successfully.
 **Bonus:** Include a list of the user's interests in the message as well.
 
 You will be doing your coding in `src/App.js` and `src/__tests__/App.test.js`.
-If you use the starter code, note that the `App.test.js` file includes the tests
-for the existing code for your reference. You will be responsible for creating
-the additional tests for the form and its behavior.
+Note that the `App.test.js` file includes the tests for the existing code for
+your reference. You will be responsible for creating the additional tests for
+the form and its behavior. We've provided descriptions of what kind of
+functionality to test, but you'll need write the actual tests.
 
 ## The Process
 
